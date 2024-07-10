@@ -2,8 +2,9 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { Link, useNavigate } from "react-router-dom";
 import service from "./../service/api";
+import "./Style/AccountPage.css";
 
-function LoginPage() {
+function LoginPage({ setDisplayLogin }) {
   const [formData, setFormData] = useState({
     password: "",
     email: "",
@@ -26,6 +27,7 @@ function LoginPage() {
       if (response.status === 200) {
         storeToken(response.data.authToken);
         await authenticateUser();
+        navigate("/");
       }
     } catch (error) {
       console.log(error);
@@ -56,7 +58,13 @@ function LoginPage() {
       <p className="error">{errorMessage}</p>
 
       <p>
-        No account? <Link to={"/login"}>Sign up!</Link>
+        No account?{" "}
+        <span
+          className="fake-link"
+          onClick={() => setDisplayLogin((currentState) => !currentState)}
+        >
+          Sign up!
+        </span>
       </p>
       <button>Login</button>
     </form>

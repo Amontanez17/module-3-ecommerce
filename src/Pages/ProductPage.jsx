@@ -1,6 +1,8 @@
 import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import service from "../service/api";
+import ProductCard from "../Components/ProductCard";
+import "../Components/Style/ProductList.css";
 
 function ProductPage() {
   const [products, setProducts] = useState(null);
@@ -22,14 +24,7 @@ function ProductPage() {
     <div>
       {products.map((oneProduct) => {
         console.log(oneProduct);
-        return (
-          <div key={oneProduct._id}>
-            <p>
-              <Link to={`/products/${oneProduct._id}`}>{oneProduct.name}</Link>
-            </p>
-            <img src={oneProduct.image} />
-          </div>
-        );
+        return <ProductCard oneProduct={oneProduct} key={oneProduct._id} />;
       })}
     </div>
   );

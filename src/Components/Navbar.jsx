@@ -1,43 +1,69 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
+import "iconify-icon";
+import "./Style/Navbar.css";
 
 function Navbar() {
-  const { user, isLoggedIn, disconnect } = useContext(AuthContext);
-  return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/products"}>Shop</NavLink>
-        </li>
+  const { user, isLoggedIn, disconnect, cart } = useContext(AuthContext);
+  const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+  const [showNav, setShowNav] = useState(false);
 
-        {!isLoggedIn ? (
-          <>
+  return (
+    <>
+      <header>
+        <div>
+          <NavLink to="/">
+            <img id="webLogo" src="/icons/brewverse-2.png" />
+          </NavLink>
+        </div>
+        <div className="actions">
+          {/* this can become a component later */}
+          {/* User icon and sub menu */}
+          <div className="nav-menu-wrapper">
+            <Link to={"/account"}>
+              <img
+                className="icon"
+                src="/icons/lets-icons--user-alt-light.svg"
+                onClick={() => setShowNav(!showNav)}
+              />
+            </Link>
+          </div>
+          <div>
+            <NavLink to={"/cart"}>
+              <img
+                className="icon"
+                src="/icons/iconoir--shopping-bag.svg"
+                alt=""
+              />
+              <span>{cart && cart.products.length}</span>
+            </NavLink>
+          </div>
+          <div>
+            <img
+              onClick={() => setShowBurgerMenu(!showBurgerMenu)}
+              className="icon"
+              src="/icons/solar--hamburger-menu-outline.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <aside className={!showBurgerMenu ? "hide-that-aside" : ""}>
+          <ul>
             <li>
-              <NavLink to={"/signup"}>Sign up</NavLink>
+              <Link to="/products">Shop</Link>
             </li>
             <li>
-              <NavLink to={"/login"}>Login</NavLink>
+              <Link to="">About</Link>
             </li>
             <li>
-              <NavLink to={"/cart"}>Cart</NavLink>
+              <Link to="">Contact</Link>
             </li>
-          </>
-        ) : (
-          <>
-            <li>
-              <button onClick={disconnect}>Logout</button>
-            </li>
-            <li>
-              <p>Welcome back {user.username}</p>
-            </li>
-          </>
-        )}
-      </ul>
-    </nav>
+          </ul>
+        </aside>
+      </header>
+    </>
   );
 }
 

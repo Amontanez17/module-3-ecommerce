@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import service from "../service/api";
+import "./Style/AccountPage.css";
 
-function SignupPage() {
+function SignupPage({ setDisplayLogin }) {
   const [formData, setFormData] = useState({
     name: "",
     password: "",
@@ -60,7 +61,13 @@ function SignupPage() {
       <p className="error">{errorMessage}</p>
 
       <p>
-        Already have an account? <Link to={"/login"}>Login.</Link>
+        Already have an account?{" "}
+        <span
+          className="fake-link"
+          onClick={() => setDisplayLogin((currentState) => !currentState)}
+        >
+          Login.
+        </span>
       </p>
       <button>Signup</button>
     </form>

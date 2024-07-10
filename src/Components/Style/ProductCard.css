@@ -1,0 +1,7 @@
+#one-product-container {
+  max-width: 45vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}

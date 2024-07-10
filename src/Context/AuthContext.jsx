@@ -7,13 +7,33 @@ const AuthContextWrapper = ({ children }) => {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isLoading, setLoading] = useState(true);
+  const [cart, setCart] = useState(null);
 
   const storeToken = (token) => localStorage.setItem("authToken", token);
   const removeToken = () => localStorage.removeItem("authToken");
 
   useEffect(() => {
     authenticateUser();
+    fetchCart();
   }, []);
+
+  async function fetchCart() {
+    try {
+      const response = await service.get("/api/orders/cart");
+      setCart(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async function handleAddToCart(id) {
+    try {
+      const res = await service.put(`/api/orders/add/${id}`);
+      setCart(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   async function authenticateUser() {
     try {
@@ -47,6 +67,7 @@ const AuthContextWrapper = ({ children }) => {
   }
 
   const contextValues = {
+    handleAddToCart,
     user,
     storeToken,
     removeToken,
@@ -54,6 +75,7 @@ const AuthContextWrapper = ({ children }) => {
     isLoading,
     isLoggedIn,
     disconnect,
+    cart,
   };
 
   return (

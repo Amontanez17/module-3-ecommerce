@@ -1,0 +1,10 @@
+#bestsellers-cont {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.header-text {
+  padding: 5rem;
+}

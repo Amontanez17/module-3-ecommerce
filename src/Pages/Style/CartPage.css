@@ -1,0 +1,13 @@
+aside {
+  transition: right 300ms;
+  background-color: #1b3635;
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  padding: 2rem;
+  min-height: 100vh;
+  min-width: 50vw;
+}
+.hide-that-aside {
+  right: -100%;
+}

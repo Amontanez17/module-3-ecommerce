@@ -1,6 +1,19 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
+}
+
+@font-face {
+  font-family: "Balgin"; /*Can be any text*/
+  src: url("/fonts/Balgin/Fontspring-DEMO-balgin-black.otf");
+}
+@font-face {
+  font-family: "Avantgarde"; /*Can be any text*/
+  src: url("/fonts/Avant Garde/ITC Avant Garde Gothic Medium.otf");
+}
+
+#page-content {
+  padding-top: 8rem;
 }
