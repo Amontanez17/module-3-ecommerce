@@ -108,8 +108,9 @@ nav {
   .close {
     color: #a5d601;
     position: absolute;
-    top: 2;
-    right: 2;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
   }
   a {
     font-size: 10rem;
