@@ -50,10 +50,16 @@ function HomePage() {
           loop={true}
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ab
-          error perferendis delectus, ad, quisquam et dicta incidunt quidem
-          doloremque esse optio corporis quia aut facilis soluta voluptates
-          labore dolores.
+          At Brewverse our love for craft beer is boundless, and our mission is
+          to shine a spotlight on the hidden gems of the brewing world. With
+          frothy fervor and unbridled enthusiasm, we dive deep into the realms
+          of rare and lesser-known brews, unearthing unique flavors and telling
+          the untold tales behind each artfully crafted pint. From the quirky
+          concoctions to the offbeat artisans, we're on a spirited quest to
+          celebrate diversity and toasting the individuality found in every
+          pour. Join us in raising a glass to the unconventional and the
+          unforgettable, because here, every sip is a discovery and every bottle
+          holds a story. Cheers to the craft beer revolution!
         </p>
       </article>
     </>
