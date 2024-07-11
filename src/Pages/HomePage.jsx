@@ -54,12 +54,7 @@ function HomePage() {
           to shine a spotlight on the hidden gems of the brewing world. With
           frothy fervor and unbridled enthusiasm, we dive deep into the realms
           of rare and lesser-known brews, unearthing unique flavors and telling
-          the untold tales behind each artfully crafted pint. From the quirky
-          concoctions to the offbeat artisans, we're on a spirited quest to
-          celebrate diversity and toasting the individuality found in every
-          pour. Join us in raising a glass to the unconventional and the
-          unforgettable, because here, every sip is a discovery and every bottle
-          holds a story. Cheers to the craft beer revolution!
+          the untold tales behind each artfully crafted pint.
         </p>
       </article>
     </>

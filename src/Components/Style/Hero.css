@@ -1,8 +1,8 @@
 .hero-text h1 {
   font-family: "Standie";
-  font-size: 8rem;
+  font-size: 7.5rem;
   text-align: center;
-  line-height: 0.9;
+  line-height: 0.8;
 }
 
 p {
@@ -29,7 +29,7 @@ p {
     ),
     url("/beer-photo.jpg");
   background-size: cover;
-  min-height: 100vh;
+  min-height: 90vh;
   p {
     display: flex;
     max-width: 50vw;
