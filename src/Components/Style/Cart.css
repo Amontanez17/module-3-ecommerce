@@ -1,0 +1,30 @@
+#cart-aside {
+  transition: right 300ms;
+  background-color: #1b3635;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  min-width: 50vw;
+  .cart-close {
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+#cart-aside.hide-the-cart {
+  right: -100%;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-left: 2rem;
+  /* justify-content: center; */
+  p {
+    align-self: center;
+  }
+}

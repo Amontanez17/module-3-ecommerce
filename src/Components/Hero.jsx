@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Style/Hero.css";
-// import "../fonts/Balgin/Fontspring-DEMO-balgin-black.otf";
+import "../App.css";
 
 function Hero() {
   return (
@@ -10,9 +10,9 @@ function Hero() {
         <div className="hero-text">
           <h1>Discover your new favorite beer</h1>
           <p>
-            Crafting Unforgettable Moments, One Sip at a Time: Explore Our
-            Curated Collection of Artisanal Brews and Elevate Your Beer
-            Experience to New Heights of Flavor and Exploration!
+            Crafting unforgettable moments, one sip at a time. Explore our
+            curated collection of artisanal brews and elevate your beer
+            experience to new heights of flavor and exploration!
           </p>
         </div>
         <div className="hero-button-container"></div>

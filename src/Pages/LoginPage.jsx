@@ -9,7 +9,7 @@ function LoginPage({ setDisplayLogin }) {
     password: "",
     email: "",
   });
-  const { storeToken, authenticateUser } = useContext(AuthContext);
+  const { storeToken, authenticateUser, fetchCart } = useContext(AuthContext);
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
@@ -27,6 +27,7 @@ function LoginPage({ setDisplayLogin }) {
       if (response.status === 200) {
         storeToken(response.data.authToken);
         await authenticateUser();
+        await fetchCart();
         navigate("/");
       }
     } catch (error) {

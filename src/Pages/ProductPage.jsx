@@ -21,7 +21,7 @@ function ProductPage() {
 
   if (!products) return <p>Loading...</p>;
   return (
-    <div>
+    <div className="product-cards-container">
       {products.map((oneProduct) => {
         console.log(oneProduct);
         return <ProductCard oneProduct={oneProduct} key={oneProduct._id} />;

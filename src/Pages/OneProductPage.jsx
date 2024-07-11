@@ -23,7 +23,7 @@ function OneProductPage({}) {
 
   if (!oneData) return <p>loading...</p>;
   return (
-    <div id="one-product-container">
+    <div id="one-product-page">
       <article id="product-details-cont">
         <div className="oneProduct-img">
           {" "}

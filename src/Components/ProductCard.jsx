@@ -6,17 +6,26 @@ import { AuthContext } from "../Context/AuthContext";
 
 function ProductCard({ oneProduct }) {
   const { handleAddToCart } = useContext(AuthContext);
+  const [notify, setNotify] = useState(false);
 
   return (
-    <div id="one-product-container">
+    <div className={`one-product-container ${notify ? "notify" : ""}`}>
       <img src={oneProduct.image} />
-      <h3>
+      <h5>
         <Link to={`/products/${oneProduct._id}`}>{oneProduct.name}</Link>
-      </h3>
+      </h5>
       <p>{oneProduct.breweryName}</p>
       <p>{`${oneProduct.price} €`}</p>
-      <button>- Quantity +</button>
-      <button onClick={() => handleAddToCart(oneProduct._id)}>
+      <button
+        onClick={() => {
+          setNotify(true);
+          setTimeout(() => {
+            setNotify(false);
+          }, 1200);
+
+          handleAddToCart(oneProduct._id);
+        }}
+      >
         Add to cart
       </button>
 

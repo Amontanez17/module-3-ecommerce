@@ -1,7 +1,9 @@
-#one-product-container {
+.one-product-container {
   max-width: 45vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  padding: 1.2rem;
+  background-color: #212223;
 }

@@ -50,8 +50,6 @@ const AuthContextWrapper = ({ children }) => {
       setUser(response.data);
       setLoading(false);
       setIsLoggedIn(true);
-
-      console.log(response);
     } catch (error) {
       setUser(null);
       setLoading(false);
@@ -64,6 +62,7 @@ const AuthContextWrapper = ({ children }) => {
   function disconnect() {
     removeToken();
     authenticateUser();
+    fetchCart();
   }
 
   const contextValues = {
@@ -76,6 +75,7 @@ const AuthContextWrapper = ({ children }) => {
     isLoggedIn,
     disconnect,
     cart,
+    fetchCart,
   };
 
   return (

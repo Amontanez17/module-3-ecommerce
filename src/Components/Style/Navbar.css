@@ -7,12 +7,11 @@ html {
 
 #webLogo {
   padding: 0 0 0 0;
-  max-width: 14vw;
+  max-width: 12vw;
 }
 
 .icon {
-  /* width: 20px; Adjust size as needed */
-  height: 23px; /* Adjust size as needed */
+  height: 23px;
 }
 
 .nav-link-container ul {
@@ -24,10 +23,9 @@ html {
 .nav-link-container li {
   display: flex;
   align-items: center;
-  /* padding: 10px; */
   cursor: pointer;
 
-  font-weight: 500px; /* Set font weight to bold */
+  font-weight: 500px;
   font-size: medium;
 }
 
@@ -36,11 +34,6 @@ html {
 }
 
 body {
-  /* margin: 0;
-  min-height: 100vh;
-  background-color: rgb(37, 37, 37);
-  color: whitesmoke;
-  overflow: hidden; */
   overflow-x: hidden;
 }
 
@@ -60,12 +53,17 @@ header {
   padding: 0 2rem;
   position: absolute;
   width: 100%;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
 
   .actions {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+  span {
+    color: #a5d601;
+    font-weight: 600;
+    font-size: 0.8rem;
   }
 }
 
@@ -97,16 +95,30 @@ nav {
   scale: 0;
 }
 
-aside {
-  transition: right 300ms;
+#nav-links {
+  font-family: "Standie";
+  transition: top 600ms cubic-bezier(1, -0.78, 0, 1.82);
   background-color: #ffda9a;
   position: absolute;
+  top: 0;
   right: 0;
-  top: 5rem;
   padding: 2rem;
   min-height: 100vh;
-  min-width: 30vw;
+  min-width: 100vw;
+  .close {
+    color: #a5d601;
+    position: absolute;
+    top: 2;
+    right: 2;
+  }
+  a {
+    font-size: 10rem;
+    font-weight: 800;
+    line-height: 9rem;
+  }
 }
-.hide-that-aside {
-  right: -100%;
+
+#nav-links.hide-that-aside {
+  top: -400vh;
+  right: 0;
 }

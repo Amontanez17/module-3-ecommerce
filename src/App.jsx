@@ -8,7 +8,6 @@ import LoginPage from "./Pages/LoginPage";
 import IsLoggedIn from "./Components/IsLoggedIn";
 import ProductPage from "./Pages/ProductPage";
 import OneProductPage from "./Pages/OneProductPage";
-import CartPage from "./Pages/CartPage";
 import PastOrders from "./Pages/PastOrdersPage";
 import AccountPage from "./Pages/AccountPage";
 import Layout from "./Components/Layout";
@@ -24,7 +23,6 @@ function App() {
           <Route path="/account" element={<AccountPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/cart" element={<CartPage />} />
           <Route path="/products" element={<ProductPage />}></Route>
 
           <Route

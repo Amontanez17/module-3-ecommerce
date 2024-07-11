@@ -1,10 +1,31 @@
+a {
+  style: none;
+}
+
+/* CSS */
 #bestsellers-cont {
   padding: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  text-align: center; /* Center the content horizontally */
 }
 
 .header-text {
-  padding: 5rem;
+  margin-bottom: 1rem; /* Add a small space below the header */
+  padding: 2rem;
+
+  h2 h3 h4 {
+    font-family: "Standie";
+  }
+}
+
+.best-product-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#intro-cont {
+  padding: 3rem;
+  h1 h2 h3 h4 {
+    font-family: "Standie";
+  }
 }

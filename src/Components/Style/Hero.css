@@ -1,13 +1,14 @@
-h1 {
-  font-family: "Balgin" sans-serif;
-  font-size: 4rem;
-  text-align: left;
+.hero-text h1 {
+  font-family: "Standie";
+  font-size: 8rem;
+  text-align: center;
+  line-height: 0.9;
 }
 
 p {
   font-family: "Avantgarde";
   font-size: 1rem;
-  text-align: left;
+  text-align: center;
 }
 .hero-button-container {
   display: flex;
@@ -15,10 +16,12 @@ p {
 }
 
 .hero {
+  padding: 7.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   background-image: linear-gradient(
       to bottom,
       rgba(15, 14, 14, 0.382),
@@ -26,9 +29,10 @@ p {
     ),
     url("/beer-photo.jpg");
   background-size: cover;
-  min-height: 80vh;
-}
-
-.hero-text {
-  text-align: center;
+  min-height: 100vh;
+  p {
+    display: flex;
+    max-width: 50vw;
+    margin: auto;
+  }
 }

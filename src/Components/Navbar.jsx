@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import { NavLink, Link } from "react-router-dom";
+import Cart from "./Cart";
 
 import "iconify-icon";
 import "./Style/Navbar.css";
@@ -9,13 +10,14 @@ function Navbar() {
   const { user, isLoggedIn, disconnect, cart } = useContext(AuthContext);
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const [showCart, setShowCart] = useState(false);
 
   return (
     <>
       <header>
         <div>
           <NavLink to="/">
-            <img id="webLogo" src="/icons/brewverse-2.png" />
+            <img id="webLogo" src="/icons/brewverse-3.png" />
           </NavLink>
         </div>
         <div className="actions">
@@ -30,15 +32,13 @@ function Navbar() {
               />
             </Link>
           </div>
-          <div>
-            <NavLink to={"/cart"}>
-              <img
-                className="icon"
-                src="/icons/iconoir--shopping-bag.svg"
-                alt=""
-              />
-              <span>{cart && cart.products.length}</span>
-            </NavLink>
+          <div onClick={() => setShowCart(!showCart)} className="cart">
+            <img
+              className="icon"
+              src="/icons/iconoir--shopping-bag.svg"
+              alt=""
+            />
+            <span>{cart && cart.products.length}</span>
           </div>
           <div>
             <img
@@ -49,10 +49,23 @@ function Navbar() {
             />
           </div>
         </div>
-        <aside className={!showBurgerMenu ? "hide-that-aside" : ""}>
+
+        <aside id="cart-aside" className={!showCart ? "hide-the-cart" : ""}>
+          <Cart setShowCart={setShowCart} />
+        </aside>
+
+        <aside
+          id="nav-links"
+          className={!showBurgerMenu ? "hide-that-aside" : ""}
+        >
+          <div className="close" onClick={() => setShowBurgerMenu(false)}>
+            X
+          </div>
           <ul>
             <li>
-              <Link to="/products">Shop</Link>
+              <Link onClick={() => setShowBurgerMenu(false)} to="/products">
+                Shop
+              </Link>
             </li>
             <li>
               <Link to="">About</Link>

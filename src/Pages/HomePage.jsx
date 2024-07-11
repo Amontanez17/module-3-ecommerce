@@ -4,6 +4,9 @@ import ProductCard from "../Components/ProductCard";
 import Hero from "../Components/Hero";
 import { Link } from "react-router-dom";
 import "./Style/HomePage.css";
+import video1 from "/Animation/Vintage Pop Sticker MAIN.mp4";
+import "../App.css";
+import "../Pages/Style/HomePage.css";
 
 function HomePage() {
   const [products, setProducts] = useState(null);
@@ -29,14 +32,23 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <h3 className="header-text">Our Bestsellers</h3>
       <article id="bestsellers-cont">
-        <ProductCard oneProduct={products[random1]} />
-        <ProductCard oneProduct={products[random3]} />
-        <ProductCard oneProduct={products[random2]} />
+        <h3 className="header-text">Our Bestsellers</h3>
+        <div className="best-product-cards-container">
+          <ProductCard oneProduct={products[random1]} />
+          <ProductCard oneProduct={products[random3]} />
+          <ProductCard oneProduct={products[random2]} />
+        </div>
       </article>
       <article id="intro-cont">
         <h3>Who are we?</h3>
+        <video
+          src={video1}
+          width="600"
+          height="300"
+          autoPlay={true}
+          loop={true}
+        />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ab
           error perferendis delectus, ad, quisquam et dicta incidunt quidem
