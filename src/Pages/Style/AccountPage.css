@@ -3,3 +3,7 @@
   cursor: pointer;
   font-weight: bold;
 }
+
+form {
+  max-width: 50vw;
+}

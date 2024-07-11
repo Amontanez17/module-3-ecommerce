@@ -21,12 +21,15 @@ function ProductPage() {
 
   if (!products) return <p>Loading...</p>;
   return (
-    <div className="product-cards-container">
-      {products.map((oneProduct) => {
-        console.log(oneProduct);
-        return <ProductCard oneProduct={oneProduct} key={oneProduct._id} />;
-      })}
-    </div>
+    <>
+      <h2>Shop our selection</h2>
+      <div className="product-cards-container">
+        {products.map((oneProduct) => {
+          console.log(oneProduct);
+          return <ProductCard oneProduct={oneProduct} key={oneProduct._id} />;
+        })}
+      </div>
+    </>
   );
 }
 
