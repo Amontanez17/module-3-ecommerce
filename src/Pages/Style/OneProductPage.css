@@ -1,3 +1,22 @@
 #product-details-cont {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oneProduct-details {
+  padding: 3rem;
+}
+
+#product-details-cont {
+  max-width: 75vw;
+  img {
+    min-width: 200px;
+  }
+}
+
+#one-product-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

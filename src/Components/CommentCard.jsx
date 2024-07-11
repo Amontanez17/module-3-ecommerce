@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../Context/AuthContext";
 import service from "../service/api";
+import "./Style/CommentCard.css";
 
 function CommentCard({ comment, fetchProduct, setSelectedComment }) {
   const { user } = useContext(AuthContext);
@@ -19,10 +20,10 @@ function CommentCard({ comment, fetchProduct, setSelectedComment }) {
       <p>
         {comment.text}{" "}
         {user?._id === comment.creator._id && (
-          <>
-            <span onClick={() => handleDelete(comment._id)}>🐉</span>
-            <span onClick={() => setSelectedComment(comment)}>pen</span>
-          </>
+          <div className="comment-btn">
+            <button onClick={() => handleDelete(comment._id)}>Delete</button>
+            <button onClick={() => setSelectedComment(comment)}>Edit</button>
+          </div>
         )}
       </p>
       <p>Rating: {comment.rating}</p>

@@ -1,0 +1,19 @@
+.comment-btn {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  button {
+    padding: 0.25rem;
+    margin-top: 1rem;
+  }
+  button:first-child {
+    color: inherit;
+    background-color: rgb(206, 56, 56);
+    border-color: rgb(206, 56, 56);
+  }
+  button:last-child {
+    color: inherit;
+    background-color: rgb(46, 78, 208);
+    border-color: rgb(46, 78, 208);
+  }
+}
