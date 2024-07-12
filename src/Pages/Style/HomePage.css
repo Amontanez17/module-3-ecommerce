@@ -24,6 +24,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  background-color: #212223;
   h1 h2 h3 h4 {
     font-family: "Standie";
   }
@@ -32,4 +33,8 @@
 
     margin-bottom: 5rem;
   }
+}
+
+article {
+  background-color: #242424;
 }
