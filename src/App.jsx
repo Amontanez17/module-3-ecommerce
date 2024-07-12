@@ -11,6 +11,7 @@ import OneProductPage from "./Pages/OneProductPage";
 import PastOrders from "./Pages/PastOrdersPage";
 import AccountPage from "./Pages/AccountPage";
 import Layout from "./Components/Layout";
+import Pointer from "./Components/Pointer";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+      <Pointer />
     </>
   );
 }

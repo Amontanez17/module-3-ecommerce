@@ -29,5 +29,7 @@
   }
   p {
     max-width: 70vw;
+
+    margin-bottom: 5rem;
   }
 }
