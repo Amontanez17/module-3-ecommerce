@@ -18,7 +18,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/nav-menu" element={<NavMenu />} /> */}
         <Route element={<Layout />}>
           <Route path="/account" element={<AccountPage />} />
           <Route path="/signup" element={<SignupPage />} />

@@ -28,13 +28,6 @@ function ProductCard({ oneProduct }) {
       >
         Add to cart
       </button>
-
-      {/* TO DISPLAY ON ONE PRODUCT PAGE ONLY */}
-
-      {/* <p>{description ? desccription : null}</p>
-      <p>{detailsType}</p>
-      <p>{detailsRegion}</p>
-      <p>{abv}</p> */}
     </div>
   );
 }
