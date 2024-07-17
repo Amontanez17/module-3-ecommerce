@@ -15,6 +15,16 @@
 }
 
 @font-face {
+  font-family: "Avantgarde bold"; /*Can be any text*/
+  src: url("/fonts/Avant Garde/ITC Avant Garde Gothic Bold.otf");
+}
+
+@font-face {
+  font-family: "Thunder"; /*Can be any text*/
+  src: url("/fonts/Web-PS/Thunder-BlackHC.otf");
+}
+
+@font-face {
   font-family: "Perfora"; /*Can be any text*/
   src: url("/fonts/Perfora-W10XH25.woff");
 }
@@ -22,6 +32,11 @@
 @font-face {
   font-family: "Standie"; /*Can be any text*/
   src: url("/fonts/Standie Bold/OTF/Standie.otf");
+}
+
+@font-face {
+  font-family: "Brice"; /*Can be any text*/
+  src: url("/fonts/Brice/Brice-Bold.otf");
 }
 
 #page-content {

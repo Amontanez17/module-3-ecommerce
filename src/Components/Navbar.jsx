@@ -12,6 +12,9 @@ function Navbar() {
   const [showNav, setShowNav] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
+  function getQuantity() {
+    return cart.products.reduce((acc, val) => a + val.quantity, 0);
+  }
   return (
     <>
       <header>
@@ -38,7 +41,7 @@ function Navbar() {
               src="/icons/iconoir--shopping-bag.svg"
               alt=""
             />
-            <span>{cart && cart.products.length}</span>
+            <span>{cart && getQuantity()}</span>
           </div>
           <div>
             <img

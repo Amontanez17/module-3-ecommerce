@@ -35,6 +35,15 @@ const AuthContextWrapper = ({ children }) => {
     }
   }
 
+  async function handleRemoveFromCart(id) {
+    try {
+      const res = await service.put(`/api/orders/remove/${id}`);
+      setCart(res.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async function authenticateUser() {
     try {
       const token = localStorage.getItem("authToken");
@@ -67,6 +76,7 @@ const AuthContextWrapper = ({ children }) => {
 
   const contextValues = {
     handleAddToCart,
+    handleRemoveFromCart,
     user,
     storeToken,
     removeToken,

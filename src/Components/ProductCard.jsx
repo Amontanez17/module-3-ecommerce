@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import service from "../service/api";
 import "./Style/ProductCard.css";
 import { AuthContext } from "../Context/AuthContext";
 
 function ProductCard({ oneProduct }) {
-  const { handleAddToCart } = useContext(AuthContext);
+  const { handleAddToCart, isLoggedIn } = useContext(AuthContext);
   const [notify, setNotify] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className={`one-product-container ${notify ? "notify" : ""}`}>
@@ -18,12 +19,16 @@ function ProductCard({ oneProduct }) {
       <p>{`${oneProduct.price} €`}</p>
       <button
         onClick={() => {
-          setNotify(true);
-          setTimeout(() => {
-            setNotify(false);
-          }, 1200);
+          if (isLoggedIn) {
+            setNotify(true);
+            setTimeout(() => {
+              setNotify(false);
+            }, 1200);
 
-          handleAddToCart(oneProduct._id);
+            handleAddToCart(oneProduct._id);
+          } else {
+            navigate("/account", { state: { redirected: true } });
+          }
         }}
       >
         Add to cart

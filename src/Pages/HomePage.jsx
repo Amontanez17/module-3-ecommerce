@@ -23,7 +23,7 @@ function HomePage() {
     fetchProducts();
   }, []);
 
-  if (!products) return <p>Loading...</p>;
+  if (!products) return <p className="loading">Loading...</p>;
 
   const random1 = Math.ceil(Math.random() * products.length - 1);
   const random2 = Math.ceil(Math.random() * products.length - 1);
