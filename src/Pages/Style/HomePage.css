@@ -1,44 +1,68 @@
 /* CSS */
 #bestsellers-cont {
-  padding: 2rem;
-  text-align: center; /* Center the content horizontally */
+	padding: 2rem;
+	text-align: center; /* Center the content horizontally */
 }
 
 .header-text {
-  margin-bottom: 1rem; /* Add a small space below the header */
-  padding: 2rem;
+	/* margin-bottom: 1rem; Add a small space below the header */
+	/* padding: 2rem; */
+	padding-top: 5rem;
 
-  h2 h3 h4 {
-    font-family: "Standie";
-  }
+	h2 h3 h4 {
+		font-family: "Standie";
+	}
 }
 
 .best-product-cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	.one-product-container {
+		max-width: 300px;
+	}
 }
 
 #intro-cont {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  background-color: #212223;
-  h1 h2 h3 h4 {
-    font-family: "Standie";
-  }
-  p {
-    max-width: 70vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	background-color: #212223;
+	h1 h2 h3 h4 {
+		font-family: "Standie";
+	}
+	p {
+		max-width: 70vw;
 
-    margin-bottom: 5rem;
-  }
+		margin-bottom: 5rem;
+	}
+	h3 {
+		padding-top: 5rem;
+	}
 }
 
 article {
-  background-color: #242424;
+	background-color: #242424;
 }
 
 .loading {
-  padding-top: 900rem;
+	padding-top: 900rem;
+}
+
+#homepage {
+	height: 100vh;
+	scroll-snap-type: y mandatory;
+	overflow: scroll;
+	> article {
+		height: 100vh;
+		scroll-snap-align: start;
+	}
+}
+
+#beer-mascot {
+	width: 300px;
+	img {
+		max-width: 100%;
+	}
 }
