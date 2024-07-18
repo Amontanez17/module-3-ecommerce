@@ -13,7 +13,7 @@ function Navbar() {
 	const [showCart, setShowCart] = useState(false)
 
 	function getQuantity() {
-		return cart.products?.reduce((acc, val) => a + val.quantity, 0)
+		return cart.products?.reduce((acc, val) => acc + val.quantity, 0)
 	}
 	return (
 		<>
