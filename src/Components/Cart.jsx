@@ -9,7 +9,7 @@ function Cart({ setShowCart }) {
 	const { cart, handleAddToCart, handleRemoveFromCart } =
 		useContext(AuthContext)
 
-	if (!cart)
+	if (!cart || !cart?.products.length)
 		return (
 			<>
 				<div className="cart-close" onClick={() => setShowCart(false)}>
